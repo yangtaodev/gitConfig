@@ -1,0 +1,31 @@
+():
+
+# <类型>(领域): <描述>
+
+# <body>正文,详细描述,可以没有
+
+# <footer>备注,通常是 BREAKING CHANGE 或修复的 bug 的链接,可以没有
+
+# 类型字段包含:
+#     feat：新功能（feature）-- emoji: ":sparkles:"有惊喜，例子 :sparkles:feat(crm): just text => ✨feat(crm): just text
+#     fix：修复bug -- emoji: ":bug:" 🐛
+#     perf：性能优化(不影响现有代码逻辑的前提下提升性能) -- emoji: ":zap:" ⚡️
+#     refactor：重构（即不是新增功能，也不是修改bug的代码变动）-- emoji: ":recycle:" ♻️
+#     revert：恢复上一次提交 -- emoji: ":rewind:" ⏪️
+#     merge：分支代码合并 -- emoji: ":twisted_rightwards_arrows:" 🔀
+#     docs：文档（documentation）-- emoji: ":memo:" 📝
+#     style：格式化 ESLint调整等（不影响代码运行的变动） -- emoji: ":art:" 🎨
+#     test：增加测试代码，单元测试 -- emoji: ":test_tube:" 🧪
+#     build：更改构建系统相关以及外部依赖 -- emoji: ":green_heart:" 💚
+#     gitignore：修改ignore -- emoji: ":see_no_evil:" 🙈
+#     config：修改配置相关文件 -- emoji: ":wrench:" 🔧
+#     scripts：修改脚本相关文件 -- emoji: ":wrench:" 🔨
+# 领域范围：
+#     用于说明 commit 影响的范围，可以是某个领域或者某个具体范围，比如修改的登录页、账户中心页等
+#     或者 crm、init、trade、ordercenter、payment、net、print、order、log、dns、
+# 描述：
+#     commit目的的简短描述，不超过50个英文字符
+#
+# body 部分是对本次 commit 的详细描述，可以分成多行
+# footer 用来关闭 Issue或以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法
+#
