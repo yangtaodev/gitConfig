@@ -2,10 +2,31 @@
 message_file = ARGV[0]
 #message = File.read(message_file)
 message = File.open(message_file){| f | f.readline}
-
 $regex = /.\((.*)\)\: ./
+typeArray = ["fix", "pref", "refactor", "revert" , "feat" , "merge", "docs", "style", "test", "build", "gitignore", "config", "scripts", "ci"]
+$allName = message.split("(")
+#puts "allName =  #$allName"
+allNameArray = Array.new($allName)
+$typeName = allNameArray.at(0)
+$i=0
+$typeArraySize = typeArray.size
+#puts $typeArraySize
 
 if !$regex.match(message)
-  puts "[Y&T] Your commit message is not formatted correctly, should like ==> aa(bb):空格cc"
+  puts "[Y&T] Error, your commit message is not formatted correctly, should like ==> aa(bb):空格cc"
   exit 1
 end
+
+while $i < $typeArraySize do
+   $temp = typeArray.at($i)
+   #puts "temp = #$temp"
+   $i +=1
+   if $typeName.include? $temp
+      exit 0
+   end
+end
+
+puts message
+puts "[Y&T] Error, your commit type out of range, should in
+[fix, pref, refactor, revert, feat, merge, docs, style, test, build, gitignore, config, scripts, ci]"
+exit 1
