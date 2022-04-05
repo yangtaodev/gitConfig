@@ -13,6 +13,7 @@ $typeArraySize = typeArray.size
 #puts $typeArraySize
 
 if !$regex.match(message)
+  puts message
   puts "[Y&T] Error, your commit message is not formatted correctly, should like ==> aa(bb):空格cc"
   exit 1
 end
